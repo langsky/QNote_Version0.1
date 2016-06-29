@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.ican.qnote"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".others.ReminderReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
+        <activity android:name=".ui.EditorActivity">
+        </activity>
+        <activity android:name=".ui.SearchActivity">
+        </activity>
+        <activity android:name=".ui.ReminderActivity">
+        </activity>
+        <activity android:name=".ui.ReminderSettingsActivity">
+        </activity>
+
+        <receiver
+            android:name=".others.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
+        <service
+            android:name=".others.ResetAlarmService"
+            android:exported="false">
+        </service>
+
+        <receiver
+            android:name=".others.MusicReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+    </application>
+
+</manifest>
